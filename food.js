@@ -1,5 +1,5 @@
-import { onSnake, expandSnake } from "./snake.js";
-import { randomGridPosition } from "./grid.js";
+import { onSnake, expandSnake } from './snake.js'
+import { randomGridPosition } from './grid.js'
 
 let food = getRandomFoodPosition()
 const EXPANSION_RATE = 1
@@ -20,9 +20,9 @@ export function draw(gameBoard) {
 }
 
 function getRandomFoodPosition() {
-  let newFoodPositon
-  while (newFoodPositon == null || onSnake(newFoodPositon)) {
-    newFoodPositon = randomGridPosition()
+  let newFoodPosition
+  while (newFoodPosition == null || onSnake(newFoodPosition)) {
+    newFoodPosition = randomGridPosition()
   }
-  return newFoodPositon
+  return newFoodPosition
 }
